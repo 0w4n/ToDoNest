@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="pip-container">
+        <video id="pip-video" muted autoplay loop></video>
+      </div>
+      <button
+        class="rounded right-top"
+        id="pip-btn"
+        type="button"
+        aria-label="Picture In Picture"
+      >
+        <i class="ti ti-picture-in-picture-top xl"></i>
+      </button>
+      <h1>Sesión de Estudio Cíclica</h1>
+      <div id="timer-display">45:00</div>
+      <div id="progress-bar">
+        <div id="progress"></div>
+      </div>
+      <button id="start-btn" type="button">Iniciar</button>
+      <button id="pause-btn" type="button">Pausar</button>
+      <button id="reset-btn" type="button">Reiniciar</button>
+      <p id="status">Bloque: Estudio Intenso</p>
+    </div>
+    <div id="task-list">
+      <h3>Lista de Tareas</h3>
+      <ul id="tasks"></ul>
+      <input type="text" id="new-task" placeholder="Nueva tarea.." />
+      <button id="add-task-btn" type="button">Añadir Tarea</button>
+    </div>
+    <button id="focus-mode-btn" type="button">Modo Distracción Cero</button>
+    <div id="active-break">
+      <h3>Pausa Activa</h3>
+      <p id="break-tip"></p>
+    </div>
+    <button id="share-btn" type="button" onclick="shareMsg">
+      Compartir Progreso
+    </button>
+    <form id="customize-form">
+      <h2>Personalizar Bloques</h2>
+      <label
+        >Estudio (minutos): <input type="number" id="study-time" value="45"
+      /></label>
+      <label
+        >Descanso corto (minutos):
+        <input type="number" id="short-break-time" value="5"
+      /></label>
+      <label
+        >Tarea ligera (minutos):
+        <input type="number" id="light-task-time" value="15"
+      /></label>
+      <label
+        >Descanso largo (minutos):
+        <input type="number" id="long-break-time" value="15"
+      /></label>
+      <button type="submit">Actualizar Tiempos</button>
+    </form>
+    <div id="stats">
+      <h3>Estadísticas</h3>
+      <p>Total Estudio: <span id="total-study">0</span> minutos</p>
+      <p>Total Descansos: <span id="total-breaks">0</span> minutos</p>
+      <p>Total Sesiones: <span id="total-sessions">0</span></p>
+    </div>
+    <audio
+      id="notification-sound"
+      src="https://www.soundjay.com/buttons/sounds/beep-30b.wav"
+    ></audio>
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/share.js"></script>
+    <script type="module" src="js/pip.js"></script>
+  </body>
+</html>

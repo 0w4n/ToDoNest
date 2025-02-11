@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f9;
+  color: #333;
+  transition: background-color 0.5s ease;
+}
+
+.container {
+  position: relative;
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 400px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.rounded {
+  border-radius: 100%;
+  padding: 10px;
+  border: none;
+  background-color: white;
+  color: inherit;
+}
+
+.rounded:hover {
+  background-color: lightgray; /* Cambia el color al pasar el cursor */
+}
+
+.right-top {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.xl {
+  font-size: x-large;
+}
+
+#pip-container {
+  display: none; /* Oculto porque se usará solo en modo PiP */
+}
+#pip-video {
+  width: 300px;
+  height: 200px;
+  background-color: white; /* Fondo neutro para el temporizador */
+}
+
+#timer-display {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+form {
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin: 10px 0;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#progress {
+  width: 0;
+  height: 100%;
+  background: #007bff;
+  transition: width 1s linear;
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 18px;
+  font-style: italic;
+}
+
+body.intense {
+  background-color: #f4f4f9;
+}
+body.break {
+  background-color: #d4f4d9;
+}
+body.light-task {
+  background-color: #f4f4d4;
+}
+
+.hidden {
+  display: none;
+}

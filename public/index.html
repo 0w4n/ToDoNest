@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoNest</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header-style.css" />
+    <link rel="stylesheet" href="css/gtoday.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <div class="nav">
+        <div class="workspace-name">
+          <div class="dropdown">
+            <div class="dropdown-btn">
+              Tableros <i class="ti ti-arrows-exchange xl"></i>
+            </div>
+            <div class="dropdown-opt">
+              <hr />
+              <div class="hom">
+                <i class="ti ti-home l"></i> Home
+                <!--Aquí ira el día a día con toda la programación de ese día. Además del carrousel-->
+              </div>
+              <div class="ins"><i class="ti ti-school l"></i> Instituto</div>
+              <div class="ioc"><i class="ti ti-badges l"></i> Iocyp</div>
+              <hr />
+              <div class="cre"><i class="ti ti-plus l"></i> Tablero</div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="botonera">
+          <button
+          type="button"
+            class="rounded"
+            aria-label="Seguimiento de tareas diarias"
+          >
+            <i class="ti ti-checkbox xl"></i>
+          </button>
+          <button type="button" class="rounded" aria-label="Gestión del tiempo">
+            <i class="ti ti-hourglass xl"></i>
+          </button>
+          <button
+          type="button"
+            class="rounded"
+            aria-label="ideas y pensamientos"
+          >
+            <i class="ti ti-bubble xl"></i>
+          </button>
+          <button
+          type="button"
+            class="rounded"
+            aria-label="Marcador de importancias"
+          >
+            <i class="ti ti-flag-3 xl"></i>
+          </button>
+          <button type="button" class="rounded" aria-label="Ideas varias">
+            <i class="ti ti-bulb xl"></i>
+          </button>
+        </div>
+        <hr />
+        <div class="fin">
+          <button
+            type="button"
+            class="rounded btn-i"
+            aria-label="Actualizar organización del tablero"
+          >
+            <i class="ti ti-refresh xl"></i>
+          </button>
+          <button type="button" class="rounded" aria-label="Usuario">
+            <i class="ti ti-user xl"></i>
+          </button>
+        </div>
+        <hr />
+        <button
+          type="button"
+          class="rounded btn-i"
+          aria-label="Abrir/Cerrar navegador"
+        >
+          <i class="ti ti-chevron-left-pipe xl"></i>
+        </button>
+        <!--Falta icono de contraer y anteriormente el de configuración (puede que el de usuario también)-->
+      </div>
+
+      <!--Contanier-->
+      <div class="container">
+        <div class="content">
+          <div class="content-name">
+            <div class="gtoday">
+              <div class="gday">
+                <p class="num">05</p>
+                <p class="day">Lun</p>
+              </div>
+              <div class="gtaks">
+                <div class="staks school">
+                  <hr class="vr" />
+                  <i class="ti ti-school coverd l"></i>
+                  <p>Examen: Lengua - 1ºh</p>
+                </div>
+                <div class="staks school">
+                  <hr class="vr" />
+                  <i class="ti ti-school coverd l"></i>
+                  <p>Examen: Mates - 4ºh</p>
+                </div>
+              </div>
+            </div>
+            <div class="title">
+              <h1 class="saludos">Buenos días, Jorge</h1>
+              <hr />
+            </div>
+            <div class="today-task">
+              <h2>Tus cosas de hoy:</h2>
+              <hr />
+              <div class="gcolumna">
+                <div class="columna completada">
+                  <!-- <h2>Completados</h2> -->
+                  <div id="completed-list">
+                    <div class="gtitle">
+                      <button
+                        type="button"
+                        class="rounded"
+                        aria-label="Acceso a la reunión"
+                      >
+                        <i class="ti ti-video l"></i>
+                      </button>
+                      <h2>Eli</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="columna actual">
+                  <!-- <h2>Actual</h2> -->
+                  <div id="current-item">
+                    <div class="gtitle d-p">
+                      <h2>Cepia - Asamblea</h2>
+                      <button
+                        type="button"
+                        class="rounded"
+                        aria-label="Acceso a la reunión"
+                      >
+                      <i class="ti ti-video l"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <h3>Orden del día:</h3>
+                      <i class="ti ti-file l"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="columna avanzada">
+                  <!-- <h2>Próximo</h2> -->
+                  <div id="upcoming-item"></div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="nextyear">
+              <h2>Camino hacia el 2025:</h2>
+              <!--Check list? con cada mes? unidas por un hr?-->
+              <hr />
+              <div class="cont"></div>
+            </div>
+            <hr />
+            <!-- <div class="carousel"></div> -->
+            <!-- Cambiar al tocar<p>Hoy - Sab - 16/11/24</p> -->
+          </div>
+        </div>
+        <!-- <hr />
+      <div class="bottom-left">
+          <div class="task">
+            <p class="right-content">0</p>
+            <p>Tareas cumplidas</p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="frase-cel">
+      <h1>Tú puedes</h1>
+    </div>
+    <!--deprecate - 143:144-->
+    <script src="js/toggleDropdown.js"></script>
+    <script src="js/toggleNav.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

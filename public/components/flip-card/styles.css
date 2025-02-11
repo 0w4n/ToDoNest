@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+#card-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; /* Da la perspectiva 3D a las tarjetas */
+  overflow: hidden;
+}
+
+.card {
+  width: 90vw; /* 90% del ancho de la ventana */
+  height: 90vh; /* 90% de la altura de la ventana */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card.flipped {
+  transform: rotateX(180deg); /* Hace que la tarjeta se voltee */
+}
+
+.card .side {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.card .front {
+  background-color: #007bff;
+  color: white;
+}
+
+.card .back {
+  background-color: #28a745;
+  color: white;
+  transform: rotateX(180deg); /* Voltea el verso */
+  position: relative;
+}
+
+.card .front .id {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card-container.swipe-down .card {
+  border-right: 5px solid red;
+}
+
+.card-container.swipe-up .card {
+  border-left: 5px solid green;
+}
+
+.round-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.left-button {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.back-text {
+  margin: 0 50px; /* Espacio entre botones */
+  text-align: center;
+}
