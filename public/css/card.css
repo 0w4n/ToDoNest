@@ -1,0 +1,72 @@
+html {
+  font-family: "Ysabeau Infant", serif;
+}
+
+html,
+body {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card-container {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card {
+  width: 90vw; /* 90% del ancho de la ventana */
+  height: 90vh; /* 90% de la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+
+.icon-tab {
+  display: inherit;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.icon-tab > i:hover {
+  color: white;
+}
+
+.concep > p {
+  margin-inline: 8px;
+}
+
+.id {
+  display: inherit;
+  flex-direction: column;
+  align-items: flex-end;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.swipe-up {
+  animation: swipe-up 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 20ms alternate
+    both;
+}
+
+@keyframes swipe-up {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(-180deg);
+  }
+}

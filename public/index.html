@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDoNest</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/header-style.css" />
     <link rel="stylesheet" href="css/gtoday.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
@@ -35,39 +36,42 @@
               </div>
               <div class="ins"><i class="ti ti-school l"></i> Instituto</div>
               <div class="ioc"><i class="ti ti-badges l"></i> Iocyp</div>
-              <hr />
-              <div class="cre"><i class="ti ti-plus l"></i> Tablero</div>
             </div>
           </div>
         </div>
         <hr />
         <div class="botonera">
           <button
-          type="button"
+            type="button"
             class="rounded"
             aria-label="Seguimiento de tareas diarias"
           >
             <i class="ti ti-checkbox xl"></i>
+            <p>Seguimiento tareas</p>
           </button>
           <button type="button" class="rounded" aria-label="Gestión del tiempo">
             <i class="ti ti-hourglass xl"></i>
+            <p>Gestión del tiempo</p>
           </button>
           <button
-          type="button"
+            type="button"
             class="rounded"
-            aria-label="ideas y pensamientos"
+            aria-label="diario"
           >
             <i class="ti ti-bubble xl"></i>
+            <p>Diario</p>
           </button>
           <button
-          type="button"
+            type="button"
             class="rounded"
             aria-label="Marcador de importancias"
           >
             <i class="ti ti-flag-3 xl"></i>
+            <p>Importancia</p>
           </button>
           <button type="button" class="rounded" aria-label="Ideas varias">
             <i class="ti ti-bulb xl"></i>
+            <p>Ideas</p>
           </button>
         </div>
         <hr />
@@ -78,9 +82,11 @@
             aria-label="Actualizar organización del tablero"
           >
             <i class="ti ti-refresh xl"></i>
+            <p>Refrescar</p>
           </button>
           <button type="button" class="rounded" aria-label="Usuario">
             <i class="ti ti-user xl"></i>
+            <p>Usuario</p>
           </button>
         </div>
         <hr />
@@ -90,6 +96,7 @@
           aria-label="Abrir/Cerrar navegador"
         >
           <i class="ti ti-chevron-left-pipe xl"></i>
+          <p>Colapsar</p>
         </button>
         <!--Falta icono de contraer y anteriormente el de configuración (puede que el de usuario también)-->
       </div>
@@ -98,27 +105,30 @@
       <div class="container">
         <div class="content">
           <div class="content-name">
-            <div class="gtoday">
-              <div class="gday">
-                <p class="num">05</p>
-                <p class="day">Lun</p>
-              </div>
-              <div class="gtaks">
-                <div class="staks school">
-                  <hr class="vr" />
-                  <i class="ti ti-school coverd l"></i>
-                  <p>Examen: Lengua - 1ºh</p>
+            <div class="otoday">
+              <p class="pwish">Buenos días, Jorge</p>
+              <div class="gtoday">
+                <div class="gday">
+                  <p class="num">05</p>
+                  <p class="day">Lun</p>
                 </div>
-                <div class="staks school">
-                  <hr class="vr" />
-                  <i class="ti ti-school coverd l"></i>
-                  <p>Examen: Mates - 4ºh</p>
+                <div class="gtaks">
+                  <div class="staks school">
+                    <hr class="vr" />
+                    <i class="ti ti-school coverd l"></i>
+                    <p>Examen: Lengua - 1ºh</p>
+                  </div>
+                  <div class="staks school">
+                    <hr class="vr" />
+                    <i class="ti ti-school coverd l"></i>
+                    <p>Examen: Mates - 4ºh</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="title">
-              <h1 class="saludos">Buenos días, Jorge</h1>
-              <hr />
+              <p class="pwish">Tareas completas</p>
+              <div class="gchart">
+                <div class="chart"></div>
+              </div>
             </div>
             <div class="today-task">
               <h2>Tus cosas de hoy:</h2>
@@ -149,12 +159,12 @@
                         class="rounded"
                         aria-label="Acceso a la reunión"
                       >
-                      <i class="ti ti-video l"></i>
+                        <i class="ti ti-video l"></i>
                       </button>
                     </div>
-                    <div>
-                      <h3>Orden del día:</h3>
+                    <div class="inline">
                       <i class="ti ti-file l"></i>
+                      <h3>Orden del día</h3>
                     </div>
                   </div>
                 </div>
@@ -185,12 +195,34 @@
         </div> -->
       </div>
     </div>
+
     <div class="frase-cel">
       <h1>Tú puedes</h1>
+    </div>
+
+    <div class="menu">
+      <button
+        type="button"
+        class="circular inverted"
+        aria-label="Expandir/Retraer el menú"
+      >
+        <i class="ti ti-plus xxl"></i>
+      </button>
+      <div class="gopt active">
+        <div class="xxx">
+          <p class="rounded">Añadir tarea</p>
+        </div>
+
+        <div class="xxx">
+          <p class="rounded">Añadir tablero</p>
+        </div>
+      </div>
     </div>
     <!--deprecate - 143:144-->
     <script src="js/toggleDropdown.js"></script>
     <script src="js/toggleNav.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/gToday.js"></script>
+    <script type="module" src="js/donut.js"></script>
+    <script type="module" src="js/linearChart.js"></script>
   </body>
 </html>

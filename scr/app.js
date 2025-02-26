@@ -1,6 +1,8 @@
 import express from "express";
 import path from "path";
-import { fileURLToPath } from "url";  // Esto es parte de Node.js, no es una librería extra
+import { fileURLToPath } from "url";
+import cors from "cors";
+import fs from "node:fs/promises";
 
 const port = 5500;
 const app = express();
@@ -9,10 +11,38 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(path.dirname(__filename));
 
+// Habilita CORS para todas las solicitudes
+app.use(cors());
+
 // Servir archivos estáticos desde la carpeta 'public'
-app.use(express.static(path.join(__dirname, "public")));  // Ruta absoluta para archivos estáticos
+app.use(express.static(path.join(__dirname, "public"))); // Ruta absoluta para archivos estáticos
 
 // Rutas
+// Ruta para servir el JSON
+app.get("/conceptos", async (req, res) => {
+  try {
+    const data = await fs.readFile(
+      path.join(__dirname, "conceptos.json"),
+      "utf8"
+    );
+    res.json(JSON.parse(data));
+  } catch (error) {
+    res.status(500).json({ error: "Error al leer el archivo" });
+  }
+});
+
+app.get("/data", async (req, res) => {
+  try {
+    const data = await fs.readFile(
+      path.join(__dirname, "scr/data.json"),
+      "utf8"
+    );
+    res.json(JSON.parse(data));
+  } catch (error) {
+    res.status(500).json({ error: "Error al leer el archivo" });
+  }
+});
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
@@ -22,9 +52,13 @@ app.get("/dev", (req, res) => {
 });
 
 // Lanzamiento del servidor
-app.listen(port, () => {
-  console.log(`Servidor escuchando el puerto ${port}: http://localhost:${port}`);
-  console.log(`Directorio raíz: ${__dirname}`);
-}).on('error', (err) => {
-  console.error('Error al iniciar el servidor:', err);
-});
+app
+  .listen(port, () => {
+    console.log(
+      `Servidor escuchando el puerto ${port}: http://127.0.0.1:${port}`
+    );
+    console.log(`Directorio raíz: ${__dirname}`);
+  })
+  .on("error", (err) => {
+    console.error("Error al iniciar el servidor:", err);
+  });

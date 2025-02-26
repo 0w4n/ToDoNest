@@ -1,11 +1,24 @@
+.otoday {
+  display: flex;
+  flex-direction: row;
+}
+
+.pwish {
+  align-self: center;
+  margin-block: 7px;
+  writing-mode: sideways-lr;
+  font-size: 18pt;
+  font-weight: 600;
+}
+
 .gtoday {
   margin: 10px;
-  padding: 6px;
+  padding: 5px;
   border-radius: 15px;
   border: 2px solid black;
-  display: flex;
+  display: inherit;
   align-items: center;
-  flex-direction: row;
+  flex-direction: inherit;
 }
 
 .gday {
@@ -15,13 +28,13 @@
 }
 
 .num {
-  margin-block: 0;
-  font-size: 84pt;
-  font-weight: 800;
+  margin: 0;
+  font-size: 80pt;
+  font-weight: 750;
 }
 
 .day {
-  margin-block: 0;
+  margin: 0;
   font-size: 44pt;
   font-weight: 650;
 }
@@ -29,7 +42,7 @@
 .gtaks {
   display: inherit;
   flex-direction: column;
-  margin: 15px;
+  margin: 16px;
 }
 
 .staks {
@@ -50,7 +63,6 @@
   margin-left: 0px;
 }
 
-
 .coverd {
   border-radius: 5px;
   border: 2px solid green;
@@ -66,4 +78,14 @@
 
 .school {
   border-color: green;
+}
+
+.chart {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 15px;
+  border: 2px solid black;
+  display: inherit;
+  align-items: center;
+  flex-direction: inherit;
 }

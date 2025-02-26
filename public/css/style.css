@@ -6,15 +6,8 @@
 html, body {
   width: -webkit-fill-available;
   height: -webkit-fill-available;
-}
-
-html {
   display: flex;
   font-family: "Ysabeau Infant", serif;
-}
-
-body {
-  display: inherit;
   justify-content: flex-start;
   gap: 10px;
 }
@@ -23,73 +16,6 @@ body {
   width: inherit;
   display: inherit;
   align-items: center;
-}
-
-.nav {
-  height: min-content;
-  display: inherit;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  padding: 10px;
-  background: black;
-  color: white;
-}
-
-.workspace-name {
-  display: inline-block;
-  position: relative;
-}
-
-.dropdown {
-  width: fit-content;
-  font-size: 16px;
-  padding: 10px;
-  appearance: none;
-  background: none;
-  outline: none;
-}
-
-.dropdown-btn {
-  display: flex; 
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.dropdown-opt {
-  display: none;
-}
-
-.dropdown-opt.active {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.dropdown-opt.active div {
-  margin-top: 2px;
-  margin-bottom: 2px;
-}
-
-.dropdown-opt div {
-  padding: 10px;
-  font-size: 16px;
-  display: flex;
-  align-items: center; /* Centrar verticalmente íconos y texto */
-  gap: 10px; /* Espacio entre íconos y texto */
-  cursor: pointer;
-}
-
-button:hover,
-.dropdown-opt div:hover,
-.dropdown-btn:hover {
-  background: white;
-  color: black;
-  border-radius: 5px;
 }
 
 .container {
@@ -101,7 +27,6 @@ button:hover,
 
 .content {
   padding: 20px;
-  font-size: 25pt;
   width: inherit;
 }
 
@@ -113,10 +38,6 @@ button:hover,
   padding-left: 5px;
 }  
 
-.d-p {
-  transform: rotate(-90deg);
-}  
-
 .rounded {
   border-radius: 100%;
   padding: 5px;
@@ -125,43 +46,20 @@ button:hover,
   color: inherit;
 }
 
-.botonera {
+.rounded.inverted {
+  background-color: black;
+  color: white;
+}
+
+#current-item {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: row;
 }
 
-.fin {
+.inline {
   display: flex;
-  flex-direction: column;
-}
-
-.workspace-name > p & i {
-  padding-inline: 5px;
-}
-
-.side-nav {
-  width: 20%;
-  border: solid;
-  border-color: black;
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-}
-
-.side-nav > ul {
-  margin: 16px;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-hr {
-  border-style: solid;
-  border-radius: 5px;
-  width: -webkit-fill-available;
-  margin-inline: 0px;
+  flex-direction: row;
+  align-items: baseline;
 }
 
 .suggestion-box {
@@ -198,21 +96,6 @@ hr {
   margin-left: 10px;
 }
 
-kbd {
-  background-color: dodgerblue;
-  border-radius: 3px;
-  border: 1px solid black;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
-    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
-  color: #f8f3f3;
-  display: inline-block;
-  font-size: 0.85em;
-  font-weight: 700;
-  line-height: 1;
-  padding: 2px 4px;
-  white-space: nowrap;
-}
-
 .gcolumna {
   gap: 10px;
   display: flex;
@@ -247,6 +130,7 @@ kbd {
 .gtitle {
   display: flex;
   flex-direction: row;
+  writing-mode: sideways-lr;
   gap: 10px;
 }
 
@@ -261,7 +145,6 @@ kbd {
   right: 0;
 }
 
-
 .cont {
   background-color: aqua;
   border-radius: 5px;
@@ -274,137 +157,52 @@ kbd {
   flex-direction: row;
 }
 
-.xl {
-  font-size: x-large;
-}
 
 .x {
   font-size: large;
 }
 
-/**/
+.xl {
+  font-size: x-large;
+}
 
-.carousel {
+.xxl {
+  font-size: xx-large;
+}
+
+.menu {
   display: flex;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  margin: 15px;
+}
+
+.circular {
+  border-radius: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+.gopt {
+  display: none;
+}
+
+.gopt.active{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.gopt.active > div {
+  display: flex;
+  
+  background-color: black;
+  color: white;
+  border-radius: 10px;
   gap: 10px;
-  overflow-x: scroll;
-  width: -webkit-fill-available;
-  padding: 15px;
-  margin: 10px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  scroll-snap-align: center;
-}
-
-.carousel::-webkit-scrollbar {
-  display: none; /* Oculta la barra de scroll en navegadores modernos */
-}
-
-.carousel.hidden-side {
-  transition: transform 0.5s ease;
-  transform: translateX(50%);
-}
-
-.date-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #f9f9f9;
-  padding: 8px;
-  border-radius: 10px;
-  width: 80px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: #333;
-  flex-shrink: 0;
-}
-
-.date-container.hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.date-container.today {
-  background: #333; /* Fondo oscuro */
-  color: #f9f9f9; /* Texto claro */
-  border: 2px solid #f9f9f9; /* Resaltar borde */
-  position: sticky;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  transition: none;
-}
-
-.today-sticky {
-  position: absolute;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  z-index: 15;
-  top: 0;
-  width: 120px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
-}
-
-h3,
-h1,
-h2 {
-  margin: 0;
-}
-
-.date-container h3 {
-  font-size: 0.7rem; /* Tamaño base para otros días */
-}
-
-.date-container h1 {
-  font-size: 1.5rem; /* Tamaño base para otros días */
-  margin: 5px 0;
-}
-
-.date-container h2 {
-  font-size: 1rem; /* Tamaño base para otros días */
-}
-
-.date-container.today h3 {
-  font-size: 1.2rem; /* Tamaño incrementado */
-}
-
-.date-container.today h1 {
-  font-size: 2rem; /* Tamaño incrementado */
-}
-
-.date-container.today h2 {
-  font-size: 1.5rem; /* Tamaño incrementado */
-}
-
-.year-separator,
-.month-separator {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #e0e0e0;
-  color: #333;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 10px 0;
-  width: 100%;
-  text-transform: uppercase;
-}
-
-.month-separator {
-  font-size: 1rem;
-  background: #d9f9d9;
-  color: #2a7a2a;
 }
 
 .frase-cel {

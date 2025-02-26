@@ -1,0 +1,122 @@
+.carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  width: -webkit-fill-available;
+  padding: 15px;
+  margin: 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  scroll-snap-align: center;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Oculta la barra de scroll en navegadores modernos */
+}
+
+.carousel.hidden-side {
+  transition: transform 0.5s ease;
+  transform: translateX(50%);
+}
+
+.date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  padding: 8px;
+  border-radius: 10px;
+  width: 80px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333;
+  flex-shrink: 0;
+}
+
+.date-container.hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.date-container.today {
+  background: #333; /* Fondo oscuro */
+  color: #f9f9f9; /* Texto claro */
+  border: 2px solid #f9f9f9; /* Resaltar borde */
+  position: sticky;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  transition: none;
+}
+
+.today-sticky {
+  position: absolute;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 15;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+}
+
+h3,
+h1,
+h2 {
+  margin: 0;
+}
+
+.date-container h3 {
+  font-size: 0.7rem; /* Tamaño base para otros días */
+}
+
+.date-container h1 {
+  font-size: 1.5rem; /* Tamaño base para otros días */
+  margin: 5px 0;
+}
+
+.date-container h2 {
+  font-size: 1rem; /* Tamaño base para otros días */
+}
+
+.date-container.today h3 {
+  font-size: 1.2rem; /* Tamaño incrementado */
+}
+
+.date-container.today h1 {
+  font-size: 2rem; /* Tamaño incrementado */
+}
+
+.date-container.today h2 {
+  font-size: 1.5rem; /* Tamaño incrementado */
+}
+
+.year-separator,
+.month-separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e0e0e0;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.month-separator {
+  font-size: 1rem;
+  background: #d9f9d9;
+  color: #2a7a2a;
+}

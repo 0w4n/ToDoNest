@@ -1,0 +1,19 @@
+html {
+  font-family: "Ysabeau Infant", serif;
+}
+
+html,
+body {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+body {
+  display: flex;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

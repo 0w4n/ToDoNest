@@ -3,7 +3,9 @@
   "main": "scr/app.js",
   "type": "module",
   "dependencies": {
-    "chart.js": "^4.4.7",
+    "canvas-confetti": "^1.9.3",
+    "cors": "^2.8.5",
+    "d3": "^7.9.0",
     "express": "^4.21.2",
     "firebase": "^11.1.0",
     "fs-extra": "^11.3.0",

@@ -1,0 +1,86 @@
+.nav {
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  background: black;
+  color: white;
+}
+
+.workspace-name {
+  display: inline-block;
+  position: relative;
+}
+
+.nav > hr {
+  margin: 8;
+  width: -webkit-fill-available;
+}
+
+button:hover,
+.dropdown-opt div:hover,
+.dropdown-btn:hover {
+  background: white;
+  color: black;
+  border-radius: 5px;
+}
+
+.dropdown {
+  width: fit-content;
+  font-size: 16px;
+  padding: 10px;
+  appearance: none;
+  background: none;
+  outline: none;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-opt {
+  display: none;
+}
+
+.dropdown-opt.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown-opt.active div {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.dropdown-opt div {
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center; /* Centrar verticalmente íconos y texto */
+  gap: 10px; /* Espacio entre íconos y texto */
+  cursor: pointer;
+}
+
+.botonera {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fin {
+  display: flex;
+  flex-direction: column;
+}
+
+.workspace-name > p & i {
+  padding-inline: 5px;
+}

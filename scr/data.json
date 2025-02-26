@@ -1,0 +1,9 @@
+{
+  "dataset": [
+    { "value": 30, "color": "#A3E4DB" },
+    { "value": 50, "color": "#F7CAC9" },
+    { "value": 45, "color": "#FFDAC1" },
+    { "value": 40, "color": "#D4A5A5" },
+    { "value": 20, "color": "#B5EAD7" }
+  ]
+}
