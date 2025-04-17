@@ -1,19 +1,121 @@
 html {
   font-family: "Ysabeau Infant", serif;
+  height: 100vh;
 }
 
-html,
 body {
-  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: -webkit-fill-available;
+  overflow-y: hidden;
+}
+
+.pop-up {
+  display: flex;
+  flex-direction: column;
+  height: -webkit-fill-available;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: white;
+}
+
+.content-pop-up {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
   height: -webkit-fill-available;
 }
 
-body {
-  display: flex;
-}
-
-.inputs {
+.container {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: -webkit-fill-available;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  justify-content: space-between;
+  scroll-snap-align: start;
+}
+
+.card {
+  border-radius: 15px;
+  color: white;
+  background: black;
+  width: min-content;
+  margin: 5px;
+  padding: 8px;
+}
+
+.card > div {
+  margin: 5px;
+}
+
+.timetable {
+  border-radius: 10px;
+  color: black;
+  background: white;
+  padding: 5px;
+  &.vertical {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.timetable > div {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 15px;
+  margin-inline: 5px;
+}
+
+.hora {
+  color: #514b4b;
+  margin: 0px;
+  text-wrap-mode: nowrap;
+  font-size: 14px;
+}
+
+.final {
+  display: flex;
+  justify-content: center;
+  margin: 8px;
+}
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 10px;
+  border: solid 1px black;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.dot.active {
+  background: white;
+  border: solid 1px black;
+  transform: scale(1.25);
 }

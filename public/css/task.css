@@ -1,0 +1,60 @@
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 7px;
+  margin: 8px;
+  height: min-content;
+  border-radius: 10px;
+  width: -webkit-fill-available;
+}
+
+.task > div {
+  color: white;
+  display: inherit;
+  flex-direction: row;
+}
+
+.time-group {
+  color: white;
+  display: inherit;
+  flex-direction: row;
+}
+
+.desplegar {
+  padding: 5px;
+  margin: 3px;
+  color: white;
+  background-color: transparent;
+  border: transparent;
+}
+
+.title {
+  margin-block: 5px;
+}
+
+.time-left {
+  margin-inline: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.time-left > i {
+  margin: 2px;
+  font-size: 24px;
+}
+
+.time-left > p {
+  margin: 0px;
+  inline-size: 22px;
+  font-size: 16px;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  margin-inline: 8px;
+}

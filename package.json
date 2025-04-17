@@ -3,16 +3,15 @@
   "main": "scr/app.js",
   "type": "module",
   "dependencies": {
-    "canvas-confetti": "^1.9.3",
     "cors": "^2.8.5",
-    "d3": "^7.9.0",
     "express": "^4.21.2",
     "firebase": "^11.1.0",
     "fs-extra": "^11.3.0",
     "mediasoup": "^3.15.2",
     "node-fetch": "^3.3.2",
     "puppeteer": "^24.1.1",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "vercel": "^41.6.1"
   },
   "version": "1.0.0",
   "scripts": {

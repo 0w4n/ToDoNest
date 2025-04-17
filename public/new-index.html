@@ -1,3 +1,4 @@
+<!-- browser-share para cuando se decida emerguer la ventana -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -18,18 +19,82 @@
     <link rel="stylesheet" href="css/header-style.css" />
   </head>
   <body>
-    <div class="progress-container"></div>
-    <div class="inputs">
-      <input type="checkbox" aria-label="completada"/>
-      <input type="checkbox" aria-label="completada"/>
-      <input type="checkbox" aria-label="completada"/>
-      <input type="checkbox" aria-label="completada"/>
-      <input type="checkbox" aria-label="completada"/>
-      <input type="checkbox" aria-label="completada"/>
-      <input type="checkbox" aria-label="completada"/>
-      <input type="checkbox" aria-label="completada"/>
-      <input type="checkbox" aria-label="completada"/>
-      <input type="checkbox" aria-label="completada"/>
+    <div class="pop-up">
+      <div class="header">
+        <i class="ti ti-dots"></i>
+        <i class="ti ti-x"></i>
+      </div>
+      <div class="content-pop-up">
+        <div class="container">
+          <div class="section">
+            <div>
+              <h2>Buenos días Jorge,</h2>
+              <h3>hoy es viernes 28 de Marzo.</h3>
+            </div>
+            <div>
+              <h1>Tus cosas de hoy,</h1>
+              <div class="card">
+                <div>
+                  <i class="ti ti-school"></i>
+                </div>
+                <div class="timetable vertical">
+                  <div>
+                    <h2>Filo</h2>
+                    <p class="hora">8:15-9:20</p>
+                  </div>
+                  <div>
+                    <h2>Lengua</h2>
+                    <p class="hora">9:20-10:25</p>
+                  </div>
+                  <div>
+                    <h2>Libre</h2>
+                    <p class="hora">10:25-11:30</p>
+                  </div>
+                  <div>
+                    <h2>Recreo</h2>
+                    <p class="hora">11:30-11:45</p>
+                  </div>
+                  <div>
+                    <h2>Mates</h2>
+                    <p class="hora">11:45-13:35</p>
+                  </div>
+                  <div>
+                    <h2>Historia</h2>
+                    <p class="hora">13:35-14:30</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="final">
+              <i class="ti ti-arrow-up-from-arc"></i>
+            </div>
+          </div>
+          <div class="section">
+            <h2>Tableros</h2>
+            <h1>Instituto</h1>
+            <div class="final">
+              <i class="ti ti-arrow-up-from-arc"></i>
+            </div>
+          </div>
+          <div class="section">
+            <h1>Iocyp</h1>
+            <i class="ti ti-paperclip"></i>
+            <div class="final">
+              <i class="ti ti-arrow-up-from-arc"></i>
+            </div>
+          </div>
+          <div class="section">
+            <h2>Y eso es todo por hoy</h2>
+            <h1>"Tu puedes"</h1>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="dot" data-indicator="0"></div>
+          <div class="dot" data-indicator="1"></div>
+          <div class="dot" data-indicator="2"></div>
+          <div class="dot" data-indicator="3"></div>
+        </div>
+      </div>
     </div>
     <script type="module" src="js/dev.js"></script>
   </body>

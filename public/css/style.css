@@ -2,41 +2,34 @@
     
 }*/
 
-/* w,h */
-html, body {
-  width: -webkit-fill-available;
-  height: -webkit-fill-available;
+body {
   display: flex;
   font-family: "Ysabeau Infant", serif;
-  justify-content: flex-start;
   gap: 10px;
+  margin: 0px;
+  height: 100vh;
 }
 
 .app {
-  width: inherit;
   display: inherit;
   align-items: center;
+  width: 100%;
 }
 
 .container {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .content {
   padding: 20px;
-  width: inherit;
 }
 
-.i-p {
-  padding-right: 5px;
-}  
-
-.p-i {
-  padding-left: 5px;
-}  
+.container,
+.content {
+  width: 100%;
+}
 
 .rounded {
   border-radius: 100%;
@@ -82,26 +75,14 @@ html, body {
   background-color: grey;
 }
 
-.suggestion {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-
-.right-content {
-  margin-right: 10px;
-}
-
-.left-content {
-  margin-left: 10px;
-}
-
 .gcolumna {
   gap: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
+  align-items: flex-start;
 }
+
 .columna {
   display: inherit;
   flex-direction: column;
@@ -109,22 +90,7 @@ html, body {
   margin: 10px;
   border-radius: 5px;
   border: white solid;
-  width: 100%;
-}
-
-.completada {
-  background-color: #2a7a2a;
-  color: white;
-}
-
-.actual {
-  background-color: orange;
-  color: white;
-}
-
-.avanzada {
-  background-color: black;
-  color: white;
+  width: 100vh;
 }
 
 .gtitle {
@@ -145,10 +111,32 @@ html, body {
   right: 0;
 }
 
-.cont {
-  background-color: aqua;
-  border-radius: 5px;
+.año {
+  border: 1px solid black;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.año > p {
+  margin: 16px;
+}
+
+.gmes {
   height: 100px;
+  background-color: aquamarine;
+}
+
+.mes {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.mes > p {
+  margin: 16px;
 }
 
 .task {
@@ -156,7 +144,6 @@ html, body {
   display: flex;
   flex-direction: row;
 }
-
 
 .x {
   font-size: large;
@@ -170,6 +157,13 @@ html, body {
   font-size: xx-large;
 }
 
+.circular {
+  border-radius: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
 .menu {
   display: flex;
   align-items: flex-end;
@@ -180,25 +174,17 @@ html, body {
   margin: 15px;
 }
 
-.circular {
-  border-radius: 100%;
-  padding: 10px;
-  background-color: black;
-  color: white;
-}
-
 .gopt {
   display: none;
 }
 
-.gopt.active{
+.gopt.active {
   display: flex;
   flex-direction: column-reverse;
 }
 
 .gopt.active > div {
   display: flex;
-  
   background-color: black;
   color: white;
   border-radius: 10px;

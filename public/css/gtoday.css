@@ -3,6 +3,14 @@
   flex-direction: row;
 }
 
+.time {
+  align-self: center;
+  margin-block: 7px;
+  writing-mode: sideways-lr;
+  font-size: 20pt;
+  font-weight: 700;
+}
+
 .pwish {
   align-self: center;
   margin-block: 7px;
@@ -13,7 +21,7 @@
 
 .gtoday {
   margin: 10px;
-  padding: 5px;
+  padding: 12px;
   border-radius: 15px;
   border: 2px solid black;
   display: inherit;

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/header-style.css" />
     <link rel="stylesheet" href="css/gtoday.css" />
+    <link rel="stylesheet" href="css/task.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,48 +46,54 @@
             type="button"
             class="rounded"
             aria-label="Seguimiento de tareas diarias"
+            id="folltasks"
           >
             <i class="ti ti-checkbox xl"></i>
-            <p>Seguimiento tareas</p>
-          </button>
-          <button type="button" class="rounded" aria-label="Gestión del tiempo">
-            <i class="ti ti-hourglass xl"></i>
-            <p>Gestión del tiempo</p>
+            Seg. de tareas
           </button>
           <button
             type="button"
             class="rounded"
-            aria-label="diario"
+            aria-label="Gestión del tiempo"
+            id="timgest"
           >
+            <i class="ti ti-hourglass xl"></i>
+            Ges. del tiempo
+          </button>
+          <button type="button" class="rounded" aria-label="Diario" id="diary">
             <i class="ti ti-bubble xl"></i>
-            <p>Diario</p>
+            Diario
           </button>
           <button
             type="button"
             class="rounded"
             aria-label="Marcador de importancias"
+            id="importchec"
           >
             <i class="ti ti-flag-3 xl"></i>
-            <p>Importancia</p>
+            Importancia
           </button>
-          <button type="button" class="rounded" aria-label="Ideas varias">
+          <button
+            type="button"
+            class="rounded"
+            aria-label="Ideas varias"
+            id="thinkpan"
+          >
             <i class="ti ti-bulb xl"></i>
-            <p>Ideas</p>
+            Ideas
           </button>
         </div>
         <hr />
         <div class="fin">
+          <button type="button" class="rounded" aria-label="Usuario">
+            <i class="ti ti-user xl"></i>
+          </button>
           <button
             type="button"
             class="rounded btn-i"
             aria-label="Actualizar organización del tablero"
           >
             <i class="ti ti-refresh xl"></i>
-            <p>Refrescar</p>
-          </button>
-          <button type="button" class="rounded" aria-label="Usuario">
-            <i class="ti ti-user xl"></i>
-            <p>Usuario</p>
           </button>
         </div>
         <hr />
@@ -96,7 +103,6 @@
           aria-label="Abrir/Cerrar navegador"
         >
           <i class="ti ti-chevron-left-pipe xl"></i>
-          <p>Colapsar</p>
         </button>
         <!--Falta icono de contraer y anteriormente el de configuración (puede que el de usuario también)-->
       </div>
@@ -106,23 +112,12 @@
         <div class="content">
           <div class="content-name">
             <div class="otoday">
+              <p class="time"></p>
               <p class="pwish">Buenos días, Jorge</p>
               <div class="gtoday">
                 <div class="gday">
-                  <p class="num">05</p>
-                  <p class="day">Lun</p>
-                </div>
-                <div class="gtaks">
-                  <div class="staks school">
-                    <hr class="vr" />
-                    <i class="ti ti-school coverd l"></i>
-                    <p>Examen: Lengua - 1ºh</p>
-                  </div>
-                  <div class="staks school">
-                    <hr class="vr" />
-                    <i class="ti ti-school coverd l"></i>
-                    <p>Examen: Mates - 4ºh</p>
-                  </div>
+                  <p class="num"></p>
+                  <p class="day"></p>
                 </div>
               </div>
               <p class="pwish">Tareas completas</p>
@@ -134,52 +129,41 @@
               <h2>Tus cosas de hoy:</h2>
               <hr />
               <div class="gcolumna">
-                <div class="columna completada">
-                  <!-- <h2>Completados</h2> -->
-                  <div id="completed-list">
-                    <div class="gtitle">
-                      <button
-                        type="button"
-                        class="rounded"
-                        aria-label="Acceso a la reunión"
-                      >
-                        <i class="ti ti-video l"></i>
-                      </button>
-                      <h2>Eli</h2>
-                    </div>
+                <div class="task">
+                  <button
+                    type="button"
+                    class="desplegar"
+                    aria-label="desplegar"
+                  >
+                    <i class="ti ti-chevron-right"></i>
+                  </button>
+                  <div>
+                    <input type="checkbox" aria-label="Marcador" />
+                    <p class="title">Nombre de la tarea 1</p>
                   </div>
-                </div>
-                <div class="columna actual">
-                  <!-- <h2>Actual</h2> -->
-                  <div id="current-item">
-                    <div class="gtitle d-p">
-                      <h2>Cepia - Asamblea</h2>
-                      <button
-                        type="button"
-                        class="rounded"
-                        aria-label="Acceso a la reunión"
-                      >
-                        <i class="ti ti-video l"></i>
-                      </button>
+                  <div class="time-group">
+                    <div class="time-left">
+                      <i class="ti ti-clock"></i>
+                      <p>+1d</p>
                     </div>
-                    <div class="inline">
-                      <i class="ti ti-file l"></i>
-                      <h3>Orden del día</h3>
-                    </div>
+                    <div class="progress-container"></div>
                   </div>
-                </div>
-                <div class="columna avanzada">
-                  <!-- <h2>Próximo</h2> -->
-                  <div id="upcoming-item"></div>
+                  <button type="button" class="desplegar" aria-label="más">
+                    <i class="ti ti-dots"></i>
+                  </button>
                 </div>
               </div>
             </div>
             <hr />
             <div class="nextyear">
-              <h2>Camino hacia el 2025:</h2>
+              <div class="">
+                <h2>Camino hacia el</h2>
+                <h2 class="año">2025</h2>
+                <h2>:</h2>
+              </div>
               <!--Check list? con cada mes? unidas por un hr?-->
               <hr />
-              <div class="cont"></div>
+              <div class="gmes"></div>
             </div>
             <hr />
             <!-- <div class="carousel"></div> -->
@@ -208,7 +192,7 @@
       >
         <i class="ti ti-plus xxl"></i>
       </button>
-      <div class="gopt active">
+      <div class="gopt">
         <div class="xxx">
           <p class="rounded">Añadir tarea</p>
         </div>

@@ -6,8 +6,13 @@
   align-items: center;
   border-radius: 10px;
   padding: 10px;
+  margin-left: 8px;
   background: black;
   color: white;
+}
+
+hr {
+  width:-webkit-fill-available;
 }
 
 .workspace-name {
@@ -76,6 +81,15 @@ button:hover,
   gap: 10px;
 }
 
+.botonera > .rounded {
+  display: flex;
+  flex-direction: column;
+}
+
+.botonera > .rounded > i {
+  padding-bottom: 5px;
+}
+
 .fin {
   display: flex;
   flex-direction: column;
@@ -84,3 +98,4 @@ button:hover,
 .workspace-name > p & i {
   padding-inline: 5px;
 }
+

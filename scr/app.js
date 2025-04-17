@@ -47,6 +47,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
+app.get("/card", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "card.html"));
+});
+
 app.get("/dev", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "new-index.html"));
 });
