@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/backend/scr/app.js"
+      "destination": "/public/index.html"
     }
   ]
 }
