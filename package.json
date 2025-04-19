@@ -14,8 +14,8 @@
   },
   "version": "1.0.0",
   "scripts": {
-    "dev": "nodemon scr/app.js",
-    "build": "node scr/app.js"
+    "build": "node scr/app.js",
+    "dev": "nodemon scr/app.js"
   },
   "author": "Jorge Levia Galán",
   "license": "MIT",
