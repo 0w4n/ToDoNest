@@ -1,5 +1,5 @@
 {
-  "public": "public",
+  "public": true,
   "cleanUrls": true,
   "rewrites": [
     {
