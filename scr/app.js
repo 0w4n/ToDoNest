@@ -1,11 +1,9 @@
+import app from "./routes/routes"
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import cors from "cors";
 import fs from "node:fs/promises";
-
-const port = 5500;
-const app = express();
 
 // Corrección para obtener __dirname en ESM
 const __filename = fileURLToPath(import.meta.url);
