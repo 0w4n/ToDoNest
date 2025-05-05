@@ -5,7 +5,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.2",
-    "firebase": "^11.1.0",
     "fs-extra": "^11.3.0",
     "mediasoup": "^3.15.2",
     "node-fetch": "^3.3.2",
