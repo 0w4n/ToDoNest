@@ -7,6 +7,8 @@ import fs from "node:fs/promises";
 const port = 5500;
 const app = express();
 
+import { Router } from "./routes/routes";
+
 // Corrección para obtener __dirname en ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(path.dirname(__filename));
@@ -19,7 +21,7 @@ app.use(express.static(path.join(__dirname, "public"))); // Ruta absoluta para a
 
 // Rutas
 // Ruta para servir el JSON
-app.get("/conceptos", async (req, res) => {
+Router.get("/conceptos", async (req, res) => {
   try {
     const data = await fs.readFile(
       path.join(__dirname, "conceptos.json"),
@@ -31,7 +33,7 @@ app.get("/conceptos", async (req, res) => {
   }
 });
 
-app.get("/data", async (req, res) => {
+Router.get("/data", async (req, res) => {
   try {
     const data = await fs.readFile(
       path.join(__dirname, "scr/data.json"),
@@ -43,15 +45,15 @@ app.get("/data", async (req, res) => {
   }
 });
 
-app.get("/", (req, res) => {
+Router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-app.get("/card", (req, res) => {
+Router.get("/card", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "card.html"));
 });
 
-app.get("/dev", (req, res) => {
+Router.get("/dev", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "new-index.html"));
 });
 
