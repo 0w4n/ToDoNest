@@ -13,4 +13,4 @@ routes.get("/time", (res, req) => {
   res.sendFile(import.meta.dirname + "../public/components/cycle-study.html");
 });
 
-export default routes();
+export default routes;
