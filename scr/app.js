@@ -7,7 +7,7 @@ import fs from "node:fs/promises";
 const port = 5500;
 const app = express();
 
-import { routes } from "./routes/routes";
+import { routes } from "./routes/routes.js";
 
 // Corrección para obtener __dirname en ESM
 const __filename = fileURLToPath(import.meta.url);
