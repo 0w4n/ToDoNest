@@ -1,15 +1,16 @@
 import { Router } from "express";
+const routes = Router();
 
-Router.get("/ideas", (res, req) => {
+routes.get("/ideas", (res, req) => {
   res.sendfile();
 });
 
-Router.get("/meet", (res, req) => {
+routes.get("/meet", (res, req) => {
   res.sendFile(import.meta.dirname + "../public/meet/index.html");
 });
 
-Router.get("/time", (res, req) => {
+routes.get("/time", (res, req) => {
   res.sendFile(import.meta.dirname + "../public/components/cycle-study.html");
 });
 
-export default Router();
+export default routes();
