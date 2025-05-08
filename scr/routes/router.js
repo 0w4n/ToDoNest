@@ -1,16 +1,22 @@
 import { Router } from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const routes = Router();
 
-routes.get("/ideas", (res, req) => {
-  res.sendfile();
+routes.get("/ideas", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/ideas.html"));
 });
 
-routes.get("/meet", (res, req) => {
-  res.sendFile(import.meta.dirname + "../public/meet/index.html");
+routes.get("/meet", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/meet/index.html"));
 });
 
-routes.get("/time", (res, req) => {
-  res.sendFile(import.meta.dirname + "../public/components/cycle-study.html");
+routes.get("/time", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/components/cycle-study.html"));
 });
 
 export default routes;
